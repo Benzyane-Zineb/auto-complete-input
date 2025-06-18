@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`AutocompleteInput matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bRKDuR bgsUYj"
+    width="100%"
+  >
+    <div
+      class="sc-hvigdm iMrxwE"
+    >
+      <input
+        aria-autocomplete="list"
+        aria-controls="suggestions-list"
+        aria-expanded="false"
+        class="sc-fhHczv bmtqSx"
+        placeholder="Search..."
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

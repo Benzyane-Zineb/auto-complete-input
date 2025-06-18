@@ -1,0 +1,42 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import React from 'react';
+import AutoCompleteInput from './AutoCompleteInput';
+
+<Meta title="Components/AutoCompleteInput" component={AutoCompleteInput} />
+
+# AutoCompleteInput
+
+An accessible and customizable autocomplete input field with debounced filtering, keyboard navigation, and async suggestion fetching.
+
+## Features
+
+- Debounced user input
+- Async fetching of suggestions
+- Custom rendering of suggestions
+- Keyboard navigation (↑ ↓ ⏎ ⎋)
+- Custom styles and error messages
+
+## Usage
+
+```tsx
+import AutoCompleteInput from './AutoCompleteInput';
+
+type Country = { name: string };
+
+const fetchCountries = async (): Promise<{ data: Country[] }> => {
+  return {
+    data: [
+      { name: 'Morocco' },
+      { name: 'France' },
+      { name: 'Germany' },
+      { name: 'Spain' },
+    ],
+  };
+};
+
+<AutoCompleteInput<Country>
+  fetchSuggestions={fetchCountries}
+  getSuggestionValue={(item) => item.name}
+  placeholder="Type a country"
+  onSelect={(item) => console.log('Selected:', item)}
+/>;
